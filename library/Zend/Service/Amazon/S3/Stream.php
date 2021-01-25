@@ -348,9 +348,10 @@ class Zend_Service_Amazon_S3_Stream
             $stat['size']  = $info['size'];
             $stat['atime'] = time();
             $stat['mtime'] = $info['mtime'];
+            return $stat;
         }
 
-        return $stat;
+        return false;
     }
 
     /**
