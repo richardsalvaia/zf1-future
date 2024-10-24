@@ -275,6 +275,17 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
     }
 
     /**
+     * Move backward to prev element.
+     * Required by interface Iterator.
+     *
+     * @return void
+     */
+    public function prev()
+    {
+        --$this->_pointer;
+    }
+
+    /**
      * Check if there is a current element after calls to rewind() or next().
      * Used to check if we've iterated to the end of the collection.
      * Required by interface Iterator.
